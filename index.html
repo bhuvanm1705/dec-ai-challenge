@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dec-ai-challenge</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      window.onerror = function(message, source, lineno, colno, error) {
+        var errDiv = document.createElement('div');
+        errDiv.style.cssText = 'position:fixed; top:0; left:0; width:100%; z-index:9999; background:white; color:red; padding:20px; border-bottom:2px solid red; font-family:monospace; white-space:pre-wrap;';
+        errDiv.innerHTML = '<h3>Global Error Occurred</h3>' +
+          '<strong>Message:</strong> ' + message + '<br>' +
+          '<strong>Source:</strong> ' + source + ':' + lineno + ':' + colno + '<br>' +
+          '<strong>Stack:</strong> ' + (error && error.stack ? error.stack : 'N/A');
+        document.body.appendChild(errDiv);
+        console.error('Logged Global Error:', message);
+      };
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
