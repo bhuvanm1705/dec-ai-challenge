@@ -133,7 +133,7 @@ function App() {
         </button>
       </nav>
 
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-8 relative z-10">
         {error && (
           <div className="max-w-md mx-auto mb-6 p-4 bg-red-50 text-red-600 rounded-lg text-sm text-center border border-red-100">
             {error}
